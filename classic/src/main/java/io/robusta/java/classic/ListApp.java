@@ -8,35 +8,64 @@ import java.util.List;
  */
 public class ListApp {
 
-    List<Integer> buildList(int a, int b, int c){
-        return null;
-    }
+	List<Integer> buildList(int a, int b, int c) {
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(a);
+		list.add(b);
+		list.add(c);
 
+		return list;
 
-    ArrayList<Integer> buildList(int... numbers){
-        return null;
-    }
+	}
 
+	ArrayList<Integer> buildList(int... numbers) { // int[numbres]
 
-    boolean equality(List<Integer> list1, List<Integer> list2){
+		ArrayList<Integer> list = new ArrayList<Integer>();
 
-        return false;
-    }
+		for (int i = 0; i < numbers.length; i++) { // int number : numbers
+			Integer n = numbers[i];
 
-    String asString (List<Integer> numbers){
-        return null;
-    }
+			list.add(n);
+		}
 
+		return list;
+	}
 
-    int first(List<Integer> ints){
-        return 0;
-    }
+	boolean equality(List<Integer> list1, List<Integer> list2) {
 
-    int last(List<Integer> ints){
-        return 0;
-    }
+		if (list1.size() != list2.size()) {
 
-    int medium(List<Integer> ints){
-        return 0;
-    }
+			return false;
+		}
+
+		int length = list1.size();
+
+		for (int i = 0; i < length; i++) {
+
+			if (!list1.get(i).equals(list2.get(i))) {
+				return false;
+			}
+
+		}
+		return true;
+
+	}
+
+	String asString(List<Integer> numbers) {
+		return null;
+
+	}
+
+	int first(List<Integer> ints) {
+
+		return 0;
+	}
+
+	int last(List<Integer> ints) {
+		return 0;
+	}
+
+	int medium(List<Integer> ints) {
+		return 0;
+	}
 }
